@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧰 在线工具箱 ToolBox
 
-## Getting Started
+免费在线工具集合，20+ 实用工具，无需下载，打开即用。
 
-First, run the development server:
+## ✨ 特色
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **20个专业工具** - JSON格式化、Base64、哈希、正则、颜色、二维码等
+- **完全免费** - 所有工具免费使用
+- **数据安全** - 所有处理在浏览器本地完成，数据不上传服务器
+- **暗色模式** - 支持亮色/暗色主题切换
+- **响应式设计** - 完美适配手机和电脑
+- **SEO友好** - 搜索引擎优化，易于收录
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ 技术栈
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js 16** - React框架，静态导出
+- **TypeScript** - 类型安全
+- **Tailwind CSS v4** - 样式框架
+- **纯前端** - 零服务器成本
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 工具列表
 
-## Learn More
+| 分类 | 工具 |
+|------|------|
+| 开发 | JSON格式化、JSON转TS、Base64、URL编解码、时间戳、MD5/SHA哈希、正则测试 |
+| 文本 | 颜色转换、文本对比、字数统计 |
+| 生成 | 密码生成、UUID生成、二维码生成、图片转Base64、Lorem Ipsum |
+| 计算 | IP查询、单位换算、百分比计算、CSS单位、进制转换 |
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 部署
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+本项目使用 GitHub Actions 自动部署到 GitHub Pages。
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+推送到 `main` 分支即可自动构建和部署。
 
-## Deploy on Vercel
+## 📄 License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT

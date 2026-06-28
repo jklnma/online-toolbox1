@@ -1,0 +1,12 @@
+{
+  "name": "在线工具箱",
+  "short_name": "ToolBox",
+  "description": "免费在线工具集合 - JSON格式化、Base64、哈希、正则等20+工具",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f9fafb",
+  "theme_color": "#2563eb",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

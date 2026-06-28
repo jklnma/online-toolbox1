@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="600" y="200" text-anchor="middle" font-size="80" fill="white" font-family="sans-serif" font-weight="bold">🧰 在线工具箱</text>
+  <text x="600" y="290" text-anchor="middle" font-size="36" fill="rgba(255,255,255,0.9)" font-family="sans-serif">免费 · 安全 · 无需下载 · 打开即用</text>
+  <text x="600" y="370" text-anchor="middle" font-size="28" fill="rgba(255,255,255,0.7)" font-family="sans-serif">JSON格式化 · Base64 · 哈希 · 正则 · 颜色 · 二维码</text>
+  <text x="600" y="420" text-anchor="middle" font-size="28" fill="rgba(255,255,255,0.7)" font-family="sans-serif">时间戳 · 密码生成 · UUID · IP查询 · 单位换算</text>
+  <rect x="450" y="480" width="300" height="60" rx="30" fill="white"/>
+  <text x="600" y="518" text-anchor="middle" font-size="24" fill="#2563eb" font-family="sans-serif" font-weight="bold">20+ 免费在线工具</text>
+</svg>
