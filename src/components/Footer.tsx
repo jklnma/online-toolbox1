@@ -3,47 +3,78 @@ import { categories } from "@/data/tools"
 
 export default function Footer() {
   return (
-    <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 mt-auto">
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-8">
-          <div>
-            <div className="flex items-center gap-2 mb-3">
-              <span className="text-xl">🧰</span>
-              <span className="font-bold">在线工具箱</span>
+    <footer className="bg-white dark:bg-gray-900 border-t border-gray-200/60 dark:border-gray-800/60 mt-auto">
+      <div className="max-w-6xl mx-auto px-4 py-10">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-10">
+          {/* Brand */}
+          <div className="col-span-2 sm:col-span-1">
+            <div className="flex items-center gap-2.5 mb-4">
+              <span className="w-8 h-8 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-sm shadow-md shadow-blue-500/20">🧰</span>
+              <span className="font-bold text-gray-900 dark:text-white">工具箱</span>
             </div>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              免费在线工具集合，无需下载，打开即用。持续更新中。
+            <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
+              免费在线工具集合，无需下载，打开即用。所有数据在浏览器本地处理。
             </p>
-          </div>
-          <div>
-            <h4 className="font-medium mb-3">热门工具</h4>
-            <div className="space-y-2 text-sm text-gray-500 dark:text-gray-400">
-              <Link href="/tools/json-formatter" className="block hover:text-blue-600 dark:hover:text-blue-400">JSON格式化</Link>
-              <Link href="/tools/base64" className="block hover:text-blue-600 dark:hover:text-blue-400">Base64编解码</Link>
-              <Link href="/tools/timestamp" className="block hover:text-blue-600 dark:hover:text-blue-400">时间戳转换</Link>
-              <Link href="/tools/md5-hash" className="block hover:text-blue-600 dark:hover:text-blue-400">MD5哈希</Link>
+            <div className="flex items-center gap-2">
+              <a href="https://github.com/jklnma/online-toolbox1" target="_blank" rel="noopener noreferrer"
+                className="w-8 h-8 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                title="GitHub">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </a>
             </div>
           </div>
+
+          {/* Hot tools */}
           <div>
-            <h4 className="font-medium mb-3">工具分类</h4>
-            <div className="space-y-2 text-sm text-gray-500 dark:text-gray-400">
-              {categories.slice(0, 6).map(cat => (
-                <div key={cat.key}>{cat.icon} {cat.name}</div>
+            <h4 className="font-semibold mb-4 text-gray-900 dark:text-gray-100 text-sm">热门工具</h4>
+            <div className="space-y-2.5 text-sm">
+              <Link href="/tools/json-formatter" className="block text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">JSON格式化</Link>
+              <Link href="/tools/base64" className="block text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Base64编解码</Link>
+              <Link href="/tools/timestamp" className="block text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">时间戳转换</Link>
+              <Link href="/tools/qr-generator" className="block text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">二维码生成</Link>
+              <Link href="/tools/password-generator" className="block text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">密码生成</Link>
+            </div>
+          </div>
+
+          {/* Categories */}
+          <div>
+            <h4 className="font-semibold mb-4 text-gray-900 dark:text-gray-100 text-sm">工具分类</h4>
+            <div className="space-y-2.5 text-sm text-gray-500 dark:text-gray-400">
+              {categories.map(cat => (
+                <div key={cat.key} className="flex items-center gap-2">
+                  <span>{cat.icon}</span>
+                  <span>{cat.name}</span>
+                </div>
               ))}
             </div>
           </div>
+
+          {/* About */}
           <div>
-            <h4 className="font-medium mb-3">关于</h4>
-            <div className="space-y-2 text-sm text-gray-500 dark:text-gray-400">
-              <Link href="/about" className="block hover:text-blue-600 dark:hover:text-blue-400">关于我们</Link>
-              <Link href="/privacy" className="block hover:text-blue-600 dark:hover:text-blue-400">隐私政策</Link>
-              <Link href="/terms" className="block hover:text-blue-600 dark:hover:text-blue-400">使用条款</Link>
-              <a href="mailto:3092616062@qq.com" className="block hover:text-blue-600 dark:hover:text-blue-400">联系我们</a>
+            <h4 className="font-semibold mb-4 text-gray-900 dark:text-gray-100 text-sm">关于</h4>
+            <div className="space-y-2.5 text-sm">
+              <Link href="/about" className="block text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">关于我们</Link>
+              <Link href="/privacy" className="block text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">隐私政策</Link>
+              <Link href="/terms" className="block text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">使用条款</Link>
+              <a href="mailto:3092616062@qq.com" className="block text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">联系我们</a>
             </div>
           </div>
         </div>
-        <div className="border-t border-gray-200 dark:border-gray-800 pt-4 text-center text-xs text-gray-400 dark:text-gray-500">
-          © 2026 在线工具箱 ToolBox - 免费实用在线工具集合 | 所有工具均在浏览器本地运行，数据不上传服务器
+
+        {/* Bottom bar */}
+        <div className="border-t border-gray-200/60 dark:border-gray-800/60 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="text-xs text-gray-400 dark:text-gray-500">
+            © 2026 在线工具箱 ToolBox · 数据本地处理，安全可靠
+          </div>
+          <div className="flex items-center gap-4 text-xs text-gray-400 dark:text-gray-500">
+            <span className="flex items-center gap-1">
+              <span className="w-1.5 h-1.5 bg-green-400 rounded-full" />
+              服务正常
+            </span>
+            <span>v1.0</span>
+          </div>
         </div>
       </div>
     </footer>
