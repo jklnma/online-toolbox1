@@ -10,6 +10,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://toolbox.dev/sitemap.xml",
+    sitemap: "https://jklnma.github.io/online-toolbox1/sitemap.xml",
   }
 }

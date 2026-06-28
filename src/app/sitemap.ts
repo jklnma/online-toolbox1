@@ -4,7 +4,7 @@ import { tools } from "@/data/tools"
 export const dynamic = "force-static"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://toolbox.dev"
+  const base = "https://jklnma.github.io/online-toolbox1"
 
   const toolPages = tools.map(t => ({
     url: `${base}/tools/${t.slug}`,

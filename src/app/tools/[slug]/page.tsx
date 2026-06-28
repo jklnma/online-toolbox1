@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: tool.name,
     description: tool.description,
     keywords: tool.keywords.join(","),
-    alternates: { canonical: `https://toolbox.dev/tools/${slug}` },
+    alternates: { canonical: `https://jklnma.github.io/online-toolbox1/tools/${slug}` },
     openGraph: {
       title: `${tool.name} - 在线工具箱`,
       description: tool.description,
@@ -76,7 +76,7 @@ export default async function ToolPage({ params }: PageProps) {
     "@type": "WebApplication",
     name: tool.name,
     description: tool.description,
-    url: `https://toolbox.dev/tools/${slug}`,
+    url: `https://jklnma.github.io/online-toolbox1/tools/${slug}`,
     applicationCategory: "DeveloperApplication",
     operatingSystem: "Any",
     offers: { "@type": "Offer", price: "0", priceCurrency: "CNY" },
@@ -86,9 +86,9 @@ export default async function ToolPage({ params }: PageProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "首页", item: "https://toolbox.dev" },
+      { "@type": "ListItem", position: 1, name: "首页", item: "https://jklnma.github.io/online-toolbox1" },
       ...(cat ? [{ "@type": "ListItem", position: 2, name: cat.name }] : []),
-      { "@type": "ListItem", position: cat ? 3 : 2, name: tool.name, item: `https://toolbox.dev/tools/${slug}` },
+      { "@type": "ListItem", position: cat ? 3 : 2, name: tool.name, item: `https://jklnma.github.io/online-toolbox1/tools/${slug}` },
     ],
   }
 
